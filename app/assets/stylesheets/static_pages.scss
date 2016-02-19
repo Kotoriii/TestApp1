@@ -1,3 +1,46 @@
 // Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+//General Layout
+
+* {
+	margin: 0;
+}
+
+html, body {
+	height: 100%;
+} 
+
+footer{
+	position: absolute;
+    bottom: 0;
+    width: 100%;
+ 	height: 50px;
+ 	background: #99ccff;
+ }
+
+.foottext{
+  	padding-top: 17.5px;
+  	padding-left: 20px;
+ }
+
+//Index
+#containerindex{
+ 	text-align: center;
+ }
+
+.tandem{
+ 	margin: 0 auto;
+ }
+
+//Contact
+#containercontact{
+ 	text-align: center;
+}
+
+//About
+
+#containerabout{
+	text-align: center;
+}
