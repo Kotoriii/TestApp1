@@ -40,6 +40,16 @@
 <footer>
   <div class="foottext">&copy; 2015 Bike Berlin</div>
 </footer>
+<script>
+$( document ).ready(function() {
+    var heights = $(".prodcol").map(function() {
+        return $(this).height();
+    }).get(),
 
+    maxHeight = Math.max.apply(null, heights);
+
+    $(".prodcol").height(maxHeight);
+});
+</script>
 </body>
 </html>
