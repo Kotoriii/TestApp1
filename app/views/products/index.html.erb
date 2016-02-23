@@ -23,3 +23,14 @@
 <div class="submitbutton"><%= link_to 'New Product', new_product_path, class: 'btn btn-default', role:'button' %>
 </div>
 </div>
+
+<script>
+$(document).on('ready page:load', function() {
+    var heights = $(".prodcol").map(function() {
+        return $(this).height();
+    }).get(),
+
+    maxHeight = Math.max.apply(null, heights);
+    $(".prodcol").height(maxHeight);
+});
+</script>
