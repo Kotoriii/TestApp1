@@ -1,0 +1,41 @@
+// Place all the styles related to the products controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+//Product Index
+
+#prindexcontainer{
+	margin: 0 auto;
+}
+
+.prindextitle{
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+.prindextable{
+	margin: 0 auto;
+	width: 75%;
+}
+
+.prindextable tr, th{
+	text-align: center;
+	padding: 20px 20px;
+}
+
+.prindextable td{
+	width: 100%;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.newprbutton{
+	margin-top: 50px;
+	text-align: center;
+}
+
+//Product show
+
+#showprodcontainer{
+	margin: 0 auto;
+}
