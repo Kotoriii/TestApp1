@@ -8,29 +8,42 @@
 	margin: 0 auto;
 }
 
-.prindextitle{
-	text-align: center;
-	margin-bottom: 50px;
-}
-
-.prindextable{
+.prodrow{
 	margin: 0 auto;
-	width: 100%;
 }
 
-.prindextable tr, th{
+.prodcol{
+	border: 2px solid black;
+	margin-bottom: 20px;
+	position: relative;
+	min-height: 100%;
+}
+
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+
+.submitbutton{
+	margin: 50px;
 	text-align: center;
-	padding: 20px 20px;
 }
 
-.prindextable td{
-	padding-left: 15px;
-	padding-right: 15px;
+.proddescript{
+	word-break: break-word;
 }
 
-.newprbutton{
-	margin-top: 50px;
-	text-align: center;
+.colbuttons{
+	padding: 20px;
 }
 
 //Product show
