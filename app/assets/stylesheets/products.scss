@@ -16,7 +16,7 @@
 	border: 2px solid black;
 	margin-bottom: 20px;
 	position: relative;
-	min-height: 100%;
+	height: 500px;
 }
 
 .clearfix:after {
@@ -34,7 +34,8 @@
 /* close commented backslash hack */
 
 .submitbutton{
-	margin: 50px;
+	margin-top: 25px;
+	margin-bottom: 100px;
 	text-align: center;
 }
 
@@ -50,4 +51,11 @@
 
 #showprodcontainer{
 	margin: 0 auto;
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px){
+	.prodcol{
+		margin: 0 auto;
+		height: 650px;
+	}
 }

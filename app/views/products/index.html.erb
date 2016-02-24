@@ -2,8 +2,8 @@
 <div class="container" id="prindexcontainer">
  <div class="row prodrow">
     <% @products.each do |product| %>
-      <div class="col-sm-3 col-md-4 clearfix">
-      <div class="col-sm-12 col-md-12 prodcol">
+      <div class="col-xs-12 col-md-4 clearfix">
+      <div class="col-md-12 prodcol">
       <%= image_tag(product.image_url, class: "img-responsive") %>
         <h2><%= product.name %></h2>
         <div class="proddescript"><p><%= product.description %></p></div>
@@ -24,7 +24,7 @@
 </div>
 </div>
 
-<script>
+<!--<script>
 $(document).on('ready page:load', function() {
     var heights = $(".prodcol").map(function() {
         return $(this).height();
@@ -33,4 +33,4 @@ $(document).on('ready page:load', function() {
     maxHeight = Math.max.apply(null, heights);
     $(".prodcol").height(maxHeight);
 });
-</script>
+</script>-->
