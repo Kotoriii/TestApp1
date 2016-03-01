@@ -21,11 +21,11 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-              <a class="navbar-brand" href="#"><i>Bike Berlin</i></a>   
+              <i><%= link_to "Bike Berlin", root_path, class: "navbar-brand" %></a></i>
           </div><!-- end navbar header -->
           <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="#containerindex" title="Back to top" id="item1" data-placement="bottom">Home</a></li>  
+              <li><%= link_to "Products", products_path %></li>  
               <li><a href="#">About</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>  
