@@ -57,7 +57,13 @@ footer{
 
 //Contact
 #containercontact{
+	margin: 0 auto;
  	text-align: center;
+}
+
+.contactform{
+	margin: 0 auto;
+	float: none;
 }
 
 //About
@@ -75,4 +81,6 @@ footer{
 .productform .form-control{
 	width: 25%;
 }
+
+
 

@@ -1,8 +1,25 @@
 <div class="container" id="containercontact">
-<h1>Contact</h1>
+<h1>Contact Us</h1>
 <br>
-<p>Bikes Berlin</p>
-<p>Thomas-Mann-Straße 14</p>
-<p>10409 Berlin-Pankow</p>
-<p>Germany</p> 
+<%= flash[:notice] %>
+
+<%= form_tag("/static_pages/thank_you") do %>
+<div class="row">
+  <div class="col-md-4 contactform">
+    <div class="form-group">
+      <%= label_tag :name, "Name" %>
+      <%= text_field_tag :name, nil, class: "form-control", placeholder: "Enter Name" %>
+    </div>      
+    <div class="form-group">
+      <%= label_tag :email, "Email Address" %>
+      <%= text_field_tag :email, nil, class: "form-control", placeholder: "Enter Email" %>
+    </div>
+    <div class="form-group">
+      <%= label_tag :message, "Message" %>
+      <%= text_area_tag :message, nil, class: "form-control", placeholder: "Enter Message" %>
+    </div>      
+  </div>
+</div>
+<%= submit_tag "Send" %>   
+<% end %>
 </div>
