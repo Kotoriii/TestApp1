@@ -4,7 +4,17 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
+    if params[:q]
+      search_term = params[:q]
+      if Rails.env == "development"
+        @products = Product.where("name LIKE ?", "%#{search_term}%")
+      else
+        @products = Product.where("name ilike ?", "%#{search_term}%") #postgres
+      end
+    #filtered list
+    else
     @products = Product.all
+    end
   end
 
   # GET /products/1
@@ -71,4 +81,4 @@ class ProductsController < ApplicationController
     def product_params
       params.require(:product).permit(:name, :description, :image_url, :color, :price)
     end
-end
+  end

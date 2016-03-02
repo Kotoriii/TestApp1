@@ -24,6 +24,15 @@
               <i><%= link_to "Bike Berlin", root_path, class: "navbar-brand" %></a></i>
           </div><!-- end navbar header -->
           <div class="navbar-collapse collapse">
+          <div class="navbar-left">
+          <%= form_tag("/products", method: "get", class:"form-inline") do %>
+          <div class="form-group searchbar">
+          <%= label_tag(:q, "Search for:") %>
+          <%= text_field_tag(:q, "", class: "form-control") %>
+          <%= submit_tag("Search", class: "btn btn-default") %>
+          <% end %>
+          </div>
+          </div>
             <ul class="nav navbar-nav navbar-right">
               <li><%= link_to "Products", products_path %></li>  
               <li><a href="#">About</a></li>

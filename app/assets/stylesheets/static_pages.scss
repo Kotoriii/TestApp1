@@ -29,6 +29,11 @@ footer{
   	padding-left: 20px;
  }
 
+.searchbar{
+	padding-top: 7.5px;
+	padding-left: 50px;
+} 
+
 //Landing
 
 #landingcontainer{
@@ -60,3 +65,14 @@ footer{
 #containerabout{
 	text-align: center;
 }
+
+//New - Edit
+
+#containernew{
+	margin: 0 auto;
+}
+
+.productform .form-control{
+	width: 25%;
+}
+
