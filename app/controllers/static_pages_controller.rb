@@ -10,9 +10,9 @@ class StaticPagesController < ApplicationController
   	@name = params[:name]
   	@email = params[:email]
   	@message = params[:message]
-  	ActionMailer::Base.mail(from: @email,
+  	UserMailer.contact_form(from: @email,
   		to: "cmackm@hotmail.com",
-  		subject: "A new contat form message from #{@name}",
+  		subject: "A new contact form message from #{@name}",
   		body: @message).deliver_now
   end
 end
