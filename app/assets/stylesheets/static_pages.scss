@@ -32,6 +32,11 @@ footer{
 .searchbar{
 	padding-top: 7.5px;
 	padding-left: 50px;
+}
+
+.sessionalert{
+	text-align: center;
+	color: blue;
 } 
 
 //Landing
@@ -83,5 +88,20 @@ footer{
 	width: 25%;
 }
 
+//Session
+
+.loginform{
+	margin: 0 auto;
+	float: none;
+	width: 250px;
+}
+.checkbox{
+	margin-left: 10px;
+}
+
+.checkbox label{
+	padding-top: 2px;
+    padding-left: 0; 
+}
 
 

@@ -11,43 +11,54 @@
 </head>
 <body>
 
-<div class="container">
-<nav class="navbar navbar-default" role="navigation">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-              <i><%= link_to "Bike Berlin", root_path, class: "navbar-brand" %></a></i>
-          </div><!-- end navbar header -->
-          <div class="navbar-collapse collapse">
+  <div class="container">
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <i><%= link_to "Bike Berlin", root_path, class: "navbar-brand" %></a></i>
+        </div><!-- end navbar header -->
+        <div class="navbar-collapse collapse">
           <div class="navbar-left">
-          <%= form_tag("/products", method: "get", class:"form-inline") do %>
-          <div class="form-group searchbar">
-          <%= label_tag(:q, "Search for:") %>
-          <%= text_field_tag(:q, "", class: "form-control") %>
-          <%= submit_tag("Search", class: "btn btn-default") %>
-          <% end %>
+            <%= form_tag("/products", method: "get", class:"form-inline") do %>
+            <div class="form-group searchbar">
+              <%= label_tag(:q, "Search for:") %>
+              <%= text_field_tag(:q, "", class: "form-control") %>
+              <%= submit_tag("Search", class: "btn btn-default") %>
+              <% end %>
+            </div>
           </div>
-          </div>
-            <ul class="nav navbar-nav navbar-right">
-              <li><%= link_to "Products", products_path %></li>  
-              <li><%= link_to "About", static_pages_about_path %></li>
-              <li><%= link_to "Contact", static_pages_contact_path %></li>
-            </ul>  
-          </div> <!-- end nav collapse -->
-        </div> <!-- end nav container -->
-      </nav><!-- end navbar -->
-</div><!-- end container -->
+          <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to "Products", products_path %></li>  
+            <li><%= link_to "About", static_pages_about_path %></li>
+            <li><%= link_to "Contact", static_pages_contact_path %></li>
+            <li><% if user_signed_in? %>
+            <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+            <% else %>
+            <%= link_to('Login', new_user_session_path) %>
+            <% end %>
+            </li>
+          </ul>  
+        </div> <!-- end nav collapse -->
+      </div> <!-- end nav container -->
+    </nav><!-- end navbar -->
+    <div class="sessionalert">
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    </div>
 
-<%= yield %>
+  </div><!-- end container -->
+
+  <%= yield %>
 
 
-<footer>
-  <div class="foottext">&copy; 2015 Bike Berlin</div>
-</footer>
+  <footer>
+    <div class="foottext">&copy; 2015 Bike Berlin</div>
+  </footer>
 </body>
 </html>
