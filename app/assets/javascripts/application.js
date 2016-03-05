@@ -15,3 +15,8 @@
 //= require turbolinks
 //= require_tree .
 
+//Alert fade out
+$(function(){
+$('.alert').delay(1200).fadeOut('slow');
+});
+
