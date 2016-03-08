@@ -1,30 +1,47 @@
 <div class="container" id="showprodcontainer">
 <p id="notice"><%= notice %></p>
 
-<p>
+
+
+<div class="col-xs-6 col-md-4 showprodthumb">
+<%= image_tag(@product.image_url, class: "img-responsive") %>
+</div>
+<div class="thumbdetails col-xs-6 col-md-4">
+<h3>
   <strong>Name:</strong>
   <%= @product.name %>
-</p>
+</h3>
+  <h3>
+  <strong>Price:</strong>
+  $ <%= @product.price %>
+</h3>
+</div>
 
+
+
+
+<div class="proddescription">
+<h2>Product Details<small><span class="glyphicon glyphicon-tag" aria-hidden="true"></span></small></h2>
 <p>
   <strong>Description:</strong>
   <%= @product.description %>
 </p>
 
 <p>
-  <strong>Image url:</strong>
-  <%= @product.image_url %>
-</p>
-<p>
   <strong>Color:</strong>
   <%= @product.color %>
-</p>
-<p>
-  <strong>Price:</strong>
-  $ <%= @product.price %>
 </p>
 
 <%= link_to 'Edit', edit_product_path(@product),class: 'btn btn-default', role:'button' %> 
 <%= link_to 'Back', products_path, class: 'btn btn-default', role:'button' %>
 
 </div>
+<hr>
+<div class="prodcomments">
+<h2>Comments <small><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span></small></h2>
+</div>
+</div>
+
+
+
+

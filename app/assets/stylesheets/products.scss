@@ -53,9 +53,39 @@
 	margin: 0 auto;
 }
 
+.thumbnail{
+	margin: 0 auto;
+}
+
+.showprodthumb{
+	text-align: center;
+}
+
+.thumbdetails{
+	margin-top: -20px;
+}
+
+.proddescription{
+	position: relative;
+	margin-top: 300px;
+	clear: left;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+hr{
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+.prodcomments{
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
 @media only screen and (min-width: 769px) and (max-width: 1024px){
 	.prodcol{
 		margin: 0 auto;
-		height: 650px;
+		height: 750px;
 	}
 }
