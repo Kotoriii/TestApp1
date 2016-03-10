@@ -3,18 +3,19 @@
 
 
 
-<div class="col-xs-6 col-md-4 showprodthumb">
+<div class="col-xs-6 col-md-5 showprodthumb">
 <%= image_tag(@product.image_url, class: "img-responsive") %>
 </div>
-<div class="thumbdetails col-xs-6 col-md-4">
-<h3>
+<div class="thumbdetails col-xs-6 col-md-5">
+<h2>
   <strong>Name:</strong>
   <%= @product.name %>
-</h3>
+</h2>
   <h3>
   <strong>Price:</strong>
   $ <%= @product.price %>
-</h3>
+</h2>
+<h2>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </h2>
 </div>
 
 
@@ -38,7 +39,9 @@
 </div>
 <hr>
 <div class="prodcomments">
-<h2>Comments <small><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span></small></h2>
+<h2>Reviews: <small><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span></small></h2>
+<%= render 'new_comment' %>
+<%= render 'comments' %>
 </div>
 </div>
 
