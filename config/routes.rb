@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'payments/create'
+
   devise_for :users
   resources :users
   resources :products do
@@ -9,6 +11,7 @@ Rails.application.routes.draw do
   get 'static_pages/contact'
   get 'static_pages/index'
   post 'static_pages/thank_you'
+  post 'payments/create'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
