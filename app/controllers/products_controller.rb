@@ -13,6 +13,7 @@ class ProductsController < ApplicationController
       end
     #filtered list
     else
+    #byebug
     @products = Product.all
     end
   end
