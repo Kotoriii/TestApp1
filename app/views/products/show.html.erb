@@ -4,7 +4,7 @@
 
 
 <div class="col-xs-6 col-md-5 showprodthumb">
-<%= image_tag(@product.image_url, class: "img-responsive") %>
+<%= image_tag(@product.image_url, class: "img-responsive img-zoom", :"data-zoom-image" => @product.image_url) %>
 </div>
 <div class="thumbdetails col-xs-6 col-md-5">
 <h2>
