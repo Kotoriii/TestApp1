@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>App1</title>
+  <title>Testbike Berlin</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -36,6 +36,7 @@
           <ul class="nav navbar-nav navbar-right">
             <li><%= link_to "Products", products_path %></li>  
             <li><%= link_to "About", static_pages_about_path %></li>
+            <li><%= link_to "Orders", orders_path %></li>
             <li><%= link_to "Contact", static_pages_contact_path %></li>
             <li><% if user_signed_in? %>
             <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
