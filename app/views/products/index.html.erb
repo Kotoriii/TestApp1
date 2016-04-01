@@ -1,7 +1,9 @@
 
 <div class="container" id="prindexcontainer">
  <div class="row prodrow">
-<%= render @products %> <!-- objects of the collection match name of the partial --> 
+ <% cache (cache_key_for_products) do %>
+<%= render @products %> <!-- objects of the collection match name of the partial -->
+<% end %> 
  </div>
 <br>
 

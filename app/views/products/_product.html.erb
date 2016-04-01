@@ -1,3 +1,4 @@
+      <% cache product do %>
       <div class="col-xs-12 col-md-4 clearfix">
       <div class="col-md-12 prodcol">
       <%= link_to image_tag(product.image_url, class: "img-responsive"), product_path(product) %>
@@ -12,5 +13,6 @@
 		</div>
 	</div>
       </div><!-- /col -->
+      <% end %>
 
-      <% logger.debug "Product: #{product.name}" %> 
+      <!--<% logger.debug "Product: #{product.name}" %>--> 
