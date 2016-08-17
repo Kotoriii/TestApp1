@@ -1,6 +1,5 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
-  respond_to :json, :html
 
   # GET /products
   # GET /products.json
@@ -10,14 +9,13 @@ class ProductsController < ApplicationController
       if Rails.env.development?
         @products = Product.where("name LIKE ?", "%#{search_term}%")
       else
-        @products = Product.where("name ILIKE ?", "%#{search_term}%") #postgres
+        @products = Product.where("name ilike ?", "%#{search_term}%") #postgres
       end
     #filtered list
     else
-    #byebug
     @products = Product.all
     end
-    respond_with @products
+    #respond_with @products
   end
 
   # GET /products/1
