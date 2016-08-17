@@ -10,7 +10,7 @@ class ProductsController < ApplicationController
       if Rails.env.development?
         @products = Product.where("name LIKE ?", "%#{search_term}%")
       else
-        @products = Product.where("name ILIKE ?", "%#{search_term}%") #postgres
+        @products = Product.where("name LIKE ?", "%#{search_term}%") #postgres
       end
     #filtered list
     else
