@@ -7,10 +7,10 @@ class ProductsController < ApplicationController
   def index
     if params[:q]
       search_term = params[:q]
-      if Rails.env == "development"
+      if Rails.env.development?
         @products = Product.where("name LIKE ?", "%#{search_term}%")
       else
-        @products = Product.where("name ilike ?", "%#{search_term}%") #postgres
+        @products = Product.where("name ILIKE ?", "%#{search_term}%") #postgres
       end
     #filtered list
     else
